@@ -1,0 +1,12 @@
+__pycache__
+*.egg-info
+*.pyc
+build
+dist
+examples/datasets
+examples/logs
+examples/progress.db
+examples/results
+long_description.md
+sdist
+undr
