@@ -18,6 +18,7 @@ catch e
     run(`/home/rjjarvis/.julia/conda/3/x86_64/bin/python undr/python/setup.py develop `)
     run(`python3 -m undr init`)
     run(`python3 -m undr install`)
+    CondaPkg.add_pip("tonic")   
 
 end
 println(Conda.PYTHONDIR)
