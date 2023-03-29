@@ -14,15 +14,13 @@ catch e
     using CondaPkg
     using PyCall
     using  Conda
-    Conda.add("pip")
-    run(`git clone https://github.com/neuromorphicsystems/undr`)
+    Conda.add("tonic",channel="conda-forge")
     run(`/home/rjjarvis/.julia/conda/3/x86_64/bin/python undr/python/setup.py develop `)
     run(`python3 -m undr init`)
     run(`python3 -m undr install`)
 
 end
 println(Conda.PYTHONDIR)
-Conda.add("tonic",channel="conda-forge")
 
 py"""
 def frames_in_julia()
